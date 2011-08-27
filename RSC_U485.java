@@ -98,7 +98,7 @@ public class RSC_U485 {
 		sendbuf[8] = sum; // チェックサム
 
 		// 送信
-		for(int i=0;i<26;i++)
+		for(int i=0;i<9;i++)
 			serial.write(sendbuf[i]);
 	}
 
