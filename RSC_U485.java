@@ -159,9 +159,7 @@ public class RSC_U485 {
 	 */
 	int getTemperature(int sId) {
 		this.getParam(sId);
-		int temperature = ((readbuf[16] << 8) & 0x0000FF00) | (readbuf[15] & 0x000000FF);
-
-		return temperature;
+		return ((readbuf[16] << 8) & 0x0000FF00) | (readbuf[15] & 0x000000FF);
 	}
 	
 	/**
@@ -173,9 +171,7 @@ public class RSC_U485 {
 	 */
 	int getVoltage(int sId) {
 		this.getParam(sId);
-		int volt = ((readbuf[18] << 8) & 0x0000FF00) | (readbuf[17] & 0x000000FF);
-
-		return volt;
+		return ((readbuf[18] << 8) & 0x0000FF00) | (readbuf[17] & 0x000000FF);
 	}
 	
 
